@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Lancer Chrome en utilisant localhost",
+            "url": "http://localhost:8089",
+            "webRoot": "${workspaceFolder}/public"
+        }
+    ]
+}

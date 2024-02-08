@@ -1,0 +1,10 @@
+# Libraries
+/node_modules
+
+# OS
+.DS_Store
+
+# TypeScript
+tsconfig.tsbuildinfo
+*.d.ts
+*.d.ts.map

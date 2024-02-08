@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "module": "ES6",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "outDir": "./public/js",
+    "baseUrl": "./src",
+    "rootDir": "./src",
+    "typeRoots": ["./node_modules/@types"],
+    "types": ["node"],
+    "moduleResolution": "Node",
+    "incremental": true,
+    "declarationMap": true,
+    "sourceRoot": "../src",
+    "inlineSourceMap": true,
+    "inlineSources": true
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["./src/**/*.spec.ts"]
+}

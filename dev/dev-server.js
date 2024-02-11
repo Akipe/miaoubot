@@ -4,9 +4,11 @@ const http = require('http')
 const fs = require('fs')
 const path = require('path')
 const WebSocket = require('ws')
+const mime = require('mime-types')
 
 const HTTP_PORT = 8089
 const WEBSOCKET_PORT = 8090
+
 const CLIENT_WEBSOCKET_CODE = fs.readFileSync(
   path.join(__dirname, 'client-websocket.js'),
   'utf8'
@@ -36,7 +38,14 @@ function serveStaticPageIfExists(route, res) {
     if (fs.statSync(route).isDirectory()) {
       return serveStaticPageIfExists(path.join(route, 'index.html'), res)
     } else if (fs.statSync(route).isFile()) {
-      res.writeHead(200)
+      let mimeType = mime.lookup(route)
+
+      let optionsResponse = {
+        ...(mimeType && { 'Content-Type': mimeType })
+      }
+
+      res.writeHead(200, optionsResponse)
+
       /** @type {string|Buffer} */
       let file = fs.readFileSync(route)
       if (route.endsWith('.html')) {

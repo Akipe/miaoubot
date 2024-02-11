@@ -8,3 +8,7 @@
 tsconfig.tsbuildinfo
 *.d.ts
 *.d.ts.map
+
+# Temporary secrets
+src/secrets
+public/js/secrets

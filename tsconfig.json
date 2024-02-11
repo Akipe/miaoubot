@@ -19,6 +19,6 @@
     "inlineSourceMap": true,
     "inlineSources": true
   },
-  "include": ["./src/**/*"],
-  "exclude": ["./src/**/*.spec.ts"]
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules"]
 }

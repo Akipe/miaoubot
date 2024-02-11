@@ -1,12 +1,17 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "chrome",
-            "request": "launch",
-            "name": "Lancer Chrome en utilisant localhost",
-            "url": "http://localhost:8089",
-            "webRoot": "${workspaceFolder}/public"
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Lancer Chrome en utilisant localhost",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:8089/index.html",
+      "webRoot": "${workspaceFolder}",
+      "sourceMapPathOverrides": {
+        "*": "${workspaceRoot}/src/*"
+      },
+      "sourceMaps": true,
+      "disableNetworkCache": true
+    }
+  ]
 }
